@@ -42,7 +42,7 @@ class MyTestCase(unittest.TestCase):
         matrix2.set_value(2, 2, 1)
 
 
-        result_matrix1 = calculator.Matrix.addition(self,matrix1, matrix2)
+        result_matrix1 = calculator.Matrix.addition(self,matrix1, matrix2)   #сложение матриц
 
         expected_result = [[1,1,1], [1,1,1],[1,1,1]]
 
@@ -53,7 +53,7 @@ class MyTestCase(unittest.TestCase):
 
 
 
-        result_matrix2 = calculator.Matrix.subtraction(self, matrix1, matrix2)
+        result_matrix2 = calculator.Matrix.subtraction(self, matrix1, matrix2)          #вычитание матриц
         expected_result1 = [[-1, -1, -1], [1, 1, 1], [-1, -1, -1]]
 
         for i in range(3):
@@ -64,14 +64,14 @@ class MyTestCase(unittest.TestCase):
 
 
 
-        result_matrix3 = calculator.Matrix.multiplication(self, matrix1, matrix2)
+        result_matrix3 = calculator.Matrix.multiplication(self, matrix1, matrix2)       #умножение матриц
         expected_result3 = [[0, 0, 0], [2, 2, 2], [0, 0, 0 ]]
 
         for i in range(3):
             for j in range(3):
                 self.assertEqual(result_matrix3.get_value(i, j), expected_result3[i][j])
 
-        result_matrix4 = calculator.Matrix.kronecker_multiplication(matrix1, matrix2)
+        result_matrix4 = calculator.Matrix.kronecker_multiplication(matrix1, matrix2)         #произведение кронекера
 
 
         expected_result4 = [
@@ -101,24 +101,24 @@ class MyTestCase(unittest.TestCase):
         calculator = Calculator1.Calculator()
 
 
-        result= calculator.Statistics.max_num([1,2,3,4,5,6,7,8,9])
+        result= calculator.Statistics.max_num([1,2,3,4,5,6,7,8,9])           #поиск максимума
         expected_result=9
         self.assertEqual(result, expected_result)
 
 
-        result=calculator.Statistics.variance([1,2,3,4,5,6,7,8,9])
+        result=calculator.Statistics.variance([1,2,3,4,5,6,7,8,9])            #дисперсия
         expected_result = 6.67
         self.assertEqual(result, expected_result)
 
-        result = calculator.Statistics.average_quadratic([1, 2, 3, 4, 5, 6, 7, 8, 9])
+        result = calculator.Statistics.average_quadratic([1, 2, 3, 4, 5, 6, 7, 8, 9])        #средне квадратичное
         expected_result = 5.63
         self.assertEqual(result, expected_result)
 
-        result = calculator.Statistics.distribution_mode([1, 2, 3, 4, 5, 6, 7, 8, 9])
+        result = calculator.Statistics.distribution_mode([1, 2, 3, 4, 5, 6, 7, 8, 9])           #мода распределения
         expected_result = 1
         self.assertEqual(result, expected_result)
 
-        result = calculator.Statistics.standart_deviation([1, 2, 3, 4, 5, 6, 7, 8, 9])
+        result = calculator.Statistics.standart_deviation([1, 2, 3, 4, 5, 6, 7, 8, 9])         #стандартное отклонение
         expected_result = 2.58
         self.assertEqual(result, expected_result)
 
