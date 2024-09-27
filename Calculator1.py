@@ -145,7 +145,7 @@ class Calculator:
                     matrix3.set_value(i, j, matrix1.get_value(i, j) - matrix2.get_value(i, j))
             return matrix3
 
-            return matrix3
+
 
         @staticmethod
         def multiplication(self, matrix1, matrix2):
@@ -182,7 +182,7 @@ class Calculator:
         def determinant(matrix1):
 
 
-            # Определитель для матрицы 3x3
+
             a = matrix1.get_value(0, 0) * (matrix1.get_value(1, 1) * matrix1.get_value(2, 2) - matrix1.get_value(1, 2) * matrix1.get_value(2, 1))
             b = matrix1.get_value(0, 1) * (matrix1.get_value(1, 0) * matrix1.get_value(2, 2) - matrix1.get_value(1, 2) * matrix1.get_value(2, 0))
             c = matrix1.get_value(0, 2) * (matrix1.get_value(1, 0) * matrix1.get_value(2, 1) - matrix1.get_value(1, 1) * matrix1.get_value(2, 0))
